@@ -1,0 +1,23 @@
+.footer {
+  @include xy-grid-container();
+  padding-top: rem-calc(40);
+  padding-bottom: rem-calc(40);
+  margin-top: rem-calc(48);
+
+  @include breakpoint(medium up) {
+    align-items: center;
+    justify-content: center;
+    padding-top: rem-calc(40);
+    padding-bottom: rem-calc(80);
+  }
+
+  .logo {
+    max-width: rem-calc(150);
+    margin-bottom: rem-calc(8);
+
+    @include breakpoint(medium up) {
+      margin-bottom: 0;
+      max-width: rem-calc(200);
+    }
+  }
+}

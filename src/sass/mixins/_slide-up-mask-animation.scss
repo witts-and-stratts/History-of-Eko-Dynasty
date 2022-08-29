@@ -1,0 +1,48 @@
+%slide-up-mask {
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+  mask: url('/assets/img/urban-sprite-2.png');
+  mask-size: 7400% 100%;
+  animation: mask-play 1s steps(73) forwards;
+  opacity: 0;
+
+  &.animate {
+    visibility: visible;
+    animation: mask-play2 1.4s steps(73) forwards;
+  }
+}
+
+@keyframes mask-play {
+  from {
+    mask-position: 0 0;
+  }
+
+  to {
+    mask-position: 100% 0;
+  }
+}
+
+@keyframes mask-play2 {
+  from {
+    mask-position: 100% 0;
+    opacity: 0;
+  }
+
+  to {
+    mask-position: 0 0;
+    opacity: 1;
+  }
+}
+
+%animate-out {
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+  mask: url('/assets/img/urban-sprite-2.png');
+  mask-size: 7400% 100%;
+  animation: mask-play2 1s steps(73) forwards;
+}
+
+%animate-in {
+  // transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+  mask: url('/assets/img/urban-sprite-2.png');
+  mask-size: 7400% 100%;
+  animation: mask-play 1.4s steps(73) forwards;
+}

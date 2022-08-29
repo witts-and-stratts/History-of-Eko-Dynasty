@@ -1,0 +1,58 @@
+// This extends foundation's buttons. 
+// You can find the settings for buttons in _settings.scss file
+
+// $border-color-default: $gray-3;
+// $border-color-hover: $gray-1;
+
+@mixin animated-border($border-color-default: transparent, $border-color-hover: $gray-1, $border-width: rem-calc(1)) {
+  // Border Animation
+  &:before,
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: $border-width solid $border-color-default;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &:before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &:after {
+    bottom: 0;
+    right: 0;
+  }
+
+  &:hover, &:focus {
+    color: $border-color-hover;
+    transform: scale(1.05);
+
+    &:before, &:after {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:before {
+      border-top-color: $border-color-hover; // Make borders visible
+      border-right-color: $border-color-hover;
+      transition:
+        width 0.25s ease-out, // Width expands first
+        height 0.25s ease-out 0.25s; // And then height
+    }
+
+    &:after {
+      border-bottom-color: $border-color-hover; // Make borders visible
+      border-left-color: $border-color-hover;
+      transition:
+        border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+        width 0.25s ease-out 0.5s, // And then exanding width
+        height 0.25s ease-out 0.75s; // And finally height
+    }
+  }
+}

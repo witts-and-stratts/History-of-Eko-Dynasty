@@ -1,0 +1,5 @@
+node_modules
+.env
+backend
+dashboard
+dist/assets/js/app.js

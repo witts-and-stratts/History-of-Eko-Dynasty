@@ -1,0 +1,86 @@
+.homepage-banner {
+  @include xy-grid-container(full);
+  min-height: 100vh;
+  padding-top: rem-calc(60);
+  background: url("/assets/img/eyo-group-background.jpg") no-repeat;
+  align-items: center;
+
+  @include breakpoint(medium up) {
+    margin-top: rem-calc(-160);
+    padding-top: rem-calc(260);
+    margin-bottom: rem-calc(-160);
+  }
+
+  @include breakpoint(large up) {
+    padding-top: rem-calc(160);
+  }
+
+  &__content {
+    @include breakpoint(medium up) {
+      margin-top: rem-calc(-30);
+    }
+
+    @include breakpoint(large up) {
+      margin-top: rem-calc(-260);
+    }
+  }
+}
+
+.praise-for-the-book {
+  @extend .bg-gradient;
+  color: $white;
+
+  &__item {
+    padding-bottom: rem-calc(40);
+
+    @include breakpoint(medium up) {
+      padding-bottom: rem-calc(60);
+    }
+
+    &__title {
+    }
+
+    &__body {
+      color: $white;
+    }
+
+    &__author {
+      text-transform: uppercase;
+      letter-spacing: rem-calc(2);
+      font-size: rem-calc(13);
+      margin-top: rem-calc(60);
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: rem-calc(20);
+        background-size: auto rem-calc(20);
+        margin-top: rem-calc(-35);
+        background-image: url("/assets/img/speech-line.svg");
+      }
+    }
+  }
+}
+
+.cell {
+  position: relative;
+}
+
+.drag-top {
+  @include breakpoint(small only) {
+    position: relative;
+    margin-top: rem-calc(-260);
+    z-index: 500;
+  }
+}
+
+.drag-top-medium {
+  @include breakpoint(medium up) {
+    position: relative;
+    margin-top: rem-calc(-260);
+    z-index: 500;
+  }
+}

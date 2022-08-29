@@ -1,0 +1,17 @@
+extends _layout
+block content
+  script(src="https://js.paystack.co/v1/inline.js")
+  .grid-container.full.bg-gray-4.pad-mobile
+    .grid-container.padding-vertical-3
+      .grid-x.padding-vertical-3
+        .cell.medium-4.medium-offset-1.pad-mobile
+          img.pad-mobile(src="/assets/img/history-of-eko-dynasty-cover-2.png" alt="The history of Eko dynasty")
+        cell.medium-5.pad-mobile.medium-offset-1.form-container
+          h2.h4.c-gradient Welcome #{first_name}, 
+          h1.h2.c-gradient Download your eBook
+          p Pick your preferred format below and download your eBook
+          a.icon-pdf.icon-5x.download-button(href="/ebook-download/pdf/"+token)
+          a.icon-epub.icon-5x.download-button(href="/ebook-download/epub/"+token)
+          a.icon-mobi.icon-5x.download-button(href="/ebook-download/mobi/"+token)
+
+          small.text-sans.c-gray-1.padding-top-3 Choose the option that is compatible with your viewing devices: PCs, Macs, iPhones, iPad, Kindle and Android tablets

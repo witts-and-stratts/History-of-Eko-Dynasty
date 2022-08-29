@@ -1,0 +1,51 @@
+extends _layout
+block meta
+  -
+    const title = "Book Credits | History of the Eko Dynasty"
+    const description = "eBook and website credits for History of the Eko Dynasty"
+    const keywords = "ebook, credits, Funmi Johnson, FreeState Publishing, Arugbo, Wale Irokosu"
+block content
+  .grid-container.full.bg-gray-4.padding-vertical-3
+    .grid-container.padding-vertical-3.pad-mobile
+      .grid-x
+        .cell.medium-6.medium-offset-3.text-center
+          h1.h2.c-gradient.padding-bottom-2 Credits
+
+          - 
+            const eBookTeam = [
+              {
+                name: "Mr. Wale Irokosu",
+                designation: "Advisory"
+              },
+              {
+                name: "Dr. Agboola Kotun",
+                designation: "Advisory"
+              },
+              {
+                name: "Mrs. Funmi Johnson",
+                designation: "Editing & Proofreading"
+              },
+              {
+                name: "Mr. Damilola Adeniyi",
+                designation: "Admin"
+              },
+              {
+                name: "Ms. Oluwateniola Disu",
+                designation: "Admin"
+              },
+              {
+                name: "Mr. Samuel David Onyekachi",
+                designation: "Manuscript Preparation"
+              },
+              {
+                name: "Mrs. Atinuke Shekarri (nee Alakija)",
+                designation: "Proofreading"
+              },
+              {
+                name: "FreeState Publishing",
+                designation: "Ebook Digitization and Web development"
+              }
+            ]
+          h1.h4.c-gradient.padding-bottom-1 E-Book Editorial &amp; Administrative Team
+          each member in eBookTeam
+            p <strong>#{member.name}</strong> <br /><em>#{member.designation}</em>

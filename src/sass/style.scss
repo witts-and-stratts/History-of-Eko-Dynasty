@@ -1,0 +1,92 @@
+@import "base/color";
+@import "settings";
+@import "foundation";
+@import "components/iconfonts";
+@import "base/icon-sizes";
+@import "mixins/animated-border";
+@import "mixins/slide-up-mask-animation";
+
+// Grids
+@include foundation-xy-grid-classes;
+
+// Global
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-forms;
+
+// page
+@import "page/_index";
+
+// Generic Components
+@include foundation-button;
+@import "components/button";
+@import "components/list";
+@import "components/_search-overlay";
+
+// Helpers
+@include foundation-visibility-classes;
+@include foundation-flex-classes;
+@include foundation-prototype-classes;
+
+@import "base/typography";
+@import "base/layout";
+
+// @include foundation-everything($prototype: true);
+
+// Sections
+@import "sections/header";
+@import "sections/footer";
+
+html,
+body {
+  scroll-behavior: smooth;
+  width: 100%;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.pdfviewer {
+  height: 100vh;
+  width: 100%;
+}
+
+.credits-link {
+  color: gray;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.parsley-errors-list {
+  margin-left: 0;
+  margin-top: rem-calc(-8);
+
+  li {
+    list-style-type: none;
+    font-size: 80%;
+    color: red;
+  }
+}
+
+.download-button {
+  @extend .bg-gradient;
+  padding: rem-calc(24);
+  display: inline-block;
+  margin-right: rem-calc(8);
+  margin-top: rem-calc(8);
+  margin-bottom: rem-calc(8);
+  color: $white;
+  border-radius: rem-calc(8);
+  transition: all 0.3s ease-out;
+  width: 30%;
+  text-align: center;
+  transform: scale(0.9);
+
+  &:hover {
+    transform: scale(1.02);
+    color: $white;
+    background-color: mix(blue, purple, 50%);
+  }
+}
+
+// button#download {
+//     display: none !important;
+// }

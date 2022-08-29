@@ -1,0 +1,83 @@
+extends _layout
+block meta
+  - 
+    const title = "History of the Eko Dynasty"
+    const description = "A captivating & authoritative history of EKO, it's culture & heritage"
+    const keywords = "eko, isaleko, eko dynasty, history of eko, lagos, nigeria, culture & heritage of eko"
+block content
+  .homepage-banner
+    .grid-container
+      .grid-x
+        .cell.medium-10.medium-offset-1.large-6.medium-order-2
+          img.pad-mobile(src="/assets/img/history-of-eko-dynasty-cover-2.png" alt="The history of Eko Dynasty")
+        .cell.large-5.align-self-middle.homepage-banner__content.margin-bottom-3
+          h1.h2.c-gradient A captivating &amp; authoritative history of EKO, it's culture &amp; heritage
+          a.button.secondary.text-spaced-2.margin-top-2.margin-bottom-3(href="/about.html") LEARN MORE
+  - 
+    const praisesForTheBook = [
+      {
+        title: "Of all the histories of Lagos I have read, none is as fascinating",
+        body: "This book, History of the Eko Dynasty, is unique when compared with the various earlier versions produced by other writers of Lagos history. Prince Bola Kotun goes beyond a mere narration of events, penetrating deeper into the “hows and wherefores” of the circumstances that surrounded historical happenings.",
+        author: "Prof. Aliu Babatunde Fafunwa (CON, NNOM)"
+      },
+        {
+        title: "Entertaining, authoritative, informative and educative",
+        body: "The origin of the Yoruba, the history of Lagos and its cultural heritage are told in the form of historical facts. Entertaining, authoritative, informative and educative, this book is highly recommended as a part of history education in all education institutions.",
+        author: "Dr. Wasiu Olayinka Gbajumo"
+      },
+        {
+        title: "A worthy reference on Lagos and the Eko dynasty",
+        body: "This book was one of my earliest introduction into the history of the Eko Dynasty. It’s still a worthy reference after reading many other books on Lagos.  <br /><br/>It’s endorsement by a number of Isale Eko greats is arguably a validation of the authenticity of the content.<br /><br /> The e-book improved on its accessibility to all and sundry, particularly the millennials. One would unreservedly commend the industry and time that went into the research and production. It seeks to avoid the problems with most books written by eminent personalities as they are usually unavailable having been out of print or you have to practically plead to get them or pay exorbitantly for the limited copies available.",
+        author: "Wale Irokosu, <br /> Chair, Culture Committee, Isale Eko Descendants’ Union"
+      },
+        {
+          title: "Finally sets the record straight",
+          body: "A very interesting, excellently researched work, by a think tank, called to stabilise the traditions of Eko and to finally set the records straight!",
+          author: "Prince Tanimose Abioye Bankole-Oki SAN, OON, CON"
+      },
+        {
+        title: "A page turner and indeed, relevant for indigenous sons and daughters of Lagos",
+        body: "The book is a page turner and readers would be convinced that indeed Lagos is rich in culture and tradition. That Lagos  belongs to the aborigines whose progenitors started settling in Lagos, over five centuries ago. It's also a very relevant resource for indigenous sons and daughters of Lagos, particularly those that were born  abroad who have very little knowledge of thier roots . <br /><br />The author Late Prince Bolakale Kotun decided to put his love for Lagos history into this well researched book for the good people of Lagos and generations unborn.",
+        author: "Dr. Agboola Kotun <br />Medical Director /CEO Lifebridge Clinic, Lekki <br />Trustee, Sanni Kotun Descendants Association"
+      },
+        {
+        title: "For the avid collectors of volumes on the origin and development of Eko, their collection is not complete without this book!",
+        body: "This chronological description of the times and lives of Eko Kings (Oba) over the past three centuries is deeply thoughtful and highly informative. The origins of Lagos as a native town are equally presented in a a logical and credible historical perspective in relation to parallel developments of adjoining towns and communities.",
+        author: "Prof. Emeritus Lateef Salako, CON"
+      },
+        {
+        title: "Undoubtedly of great value to young and old Lagosians and everyone alike",
+        body: "The contents of this book will undoubtedly be of great value to both the young and old Lagosians, and to other people who will be interested in recognising the status of Lagos as a place with historical origins, as against the wrong notion that Eko is a “no man’s land”.",
+        author: "Alh. J. A. Gbadamosi, OON"
+      },
+        {
+        title: "A veritable treasure trove of Lagos history",
+        body: "History of Eko Dynasty answers the questions of the history and culture of “Awon Omo Eko” (Indigenous Lagosians), and it is a veritable source of enlightenment for anyone willing to fill in the cultural and traditional gaps created by the evolution of EKO into a mega city called Lagos.",
+        author: "Chief Jimi Agbaje"
+      },
+    ]
+  .praise-for-the-book.padding-vertical-3
+    .grid-container.padding-vertical-3
+      .grid-x
+        h2.h4.cell.text-sans.margin-bottom-3.padding-bottom-3.text-uppercase.text-spaced-3(data-aos="fade-up" data-aos-duration="2000") Praise for the book
+      .grid-x
+        .cell.medium-8.large-8.padding-bottom-3
+          .cell.grid-x.grid-margin-y.js-slick(data-slick='{"rows": 2, "cols": 2, "slidesToShow": 1, "slidesToScroll": 1, "adaptiveHeight": true, "prevArrow": ".praise-for-the-book__nav .icon-chevron-left", "nextArrow": ".praise-for-the-book__nav .icon-chevron-right"}')
+            each praise in praisesForTheBook 
+              - const duration = (index + 2) * 1000         
+              .cell.praise-for-the-book__item(data-aos="fade-up" data-aos-duration=duration)
+                h3.praise-for-the-book__item__title: em=praise.title
+                p.praise-for-the-book__item__body !{praise.body}
+                h6.praise-for-the-book__item__author !{praise.author}
+          .cell.praise-for-the-book__nav
+            button.icon-chevron-left.margin-right-1.icon-3x.c-white
+            button.icon-chevron-right.margin-right-1.icon-3x.c-white
+        //- .cell.medium-4.medium-offset-2(data-aos="fade-in" data-aos-duration="3000")
+        //-   - const images = [ "oba-1", "eko-cradle", "oba-dosunmu", "oba-falolu", "oba-ibikunle", "oba-yekini" ]
+        //-   .grid-x.js-slick(data-slick='{"cols": 2, "slidesToShow": 1, "slidesToScroll": 1, "adaptiveHeight": true, "arrows": false, "dots": true}')
+        //-     each image in images
+        //-       - const img = `/assets/img/${image}.jpg`
+        //-       .cell.praise-for-the-book__image-item
+        //-         img(src=img alt=image)   
+
+  include _partials/_get-the-book

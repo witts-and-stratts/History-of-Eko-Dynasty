@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  eko_test_server:
+    image: nginx:1.15.8-alpine
+    container_name: eko-test-server
+    volumes:
+      - ./dist:/usr/share/nginx/html
+    networks:
+      - webnet
+      - default
+    # ports:
+    #   - 8100:80
+    environment:
+      - NGINX_HOST="eko.witts-stratts.com"
+      - NGINX_PORT="80"
+      - VIRTUAL_HOST=eko.witts-stratts.com
+      # - DOMAINS="freestate-publishing.com => www.freestate-publishing.com"
+
+networks:
+  webnet:
+  default:
+      external:
+        name: weboverlay

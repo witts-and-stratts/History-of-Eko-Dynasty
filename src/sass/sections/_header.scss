@@ -1,0 +1,131 @@
+.header {
+  @include xy-grid-container();
+  padding-top: rem-calc(16);
+  padding-bottom: rem-calc(16);
+
+  @include breakpoint(medium up) {
+    padding-top: rem-calc(24);
+    padding-bottom: rem-calc(24);
+  }
+
+  @include breakpoint(large up) {
+    padding-top: rem-calc(36);
+    padding-bottom: rem-calc(36);
+  }
+
+  .logo {
+    max-width: rem-calc(120);
+
+    @include breakpoint(medium up) {
+      max-width: rem-calc(150);
+    }
+  }
+
+  nav {
+    @include breakpoint(small only) {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0%;
+      right: 0;
+      background-color: $white;
+      z-index: 1000;
+      text-align: center;
+      visibility: hidden;
+    }
+    @include breakpoint(medium up) {
+      text-align: right;
+    }
+    
+    ul {
+      margin: 0;
+      padding: 0;
+
+      @include breakpoint(small only) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      @include breakpoint(medium up) {
+        float: right;
+      }
+    }
+    li {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      text-transform: uppercase;
+
+      @include breakpoint(medium up) {
+        display: inline-block;
+      }
+
+      a {
+        padding: rem-calc(24) rem-calc(8);
+        font-size: rem-calc(20);
+        line-height: 2;
+        letter-spacing: rem-calc(1);
+
+        @include breakpoint(medium up) {
+          font-size: rem-calc(13);
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  z-index: 3000;
+  transform: scale(0.5);
+  margin-top: rem-calc(-27.5);
+}
+
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+
+.ham1.active {
+  transform: scale(0.5) rotate(45deg);
+}
+
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}
+
+
+@keyframes animateMenu {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}

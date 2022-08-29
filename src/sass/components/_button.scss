@@ -1,0 +1,33 @@
+.button {
+  user-select: none;
+  position: relative;
+  transition: color 0.25s, transform 0.25s;
+  transform-origin: center center;
+  min-width: rem-calc(200);
+
+  // &:after {
+  //   content: '';
+  //   bottom: rem-calc(-16);
+  //   left: 0;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: rem-calc(10);
+  //   background-image: url('/assets/img/pattern-1.svg');
+  //   background-repeat: repeat;
+  // }
+
+  // @include animated-border;
+
+  &.secondary {
+    background-color: $black;
+    color: $white;
+  }
+
+  &.tiny {
+    letter-spacing: rem-calc(1);
+  }
+
+  &.small {
+    letter-spacing: rem-calc(1);
+  }
+}

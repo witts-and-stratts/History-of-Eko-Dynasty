@@ -1,0 +1,34 @@
+extends _layout
+block content
+  script(src="https://js.paystack.co/v1/inline.js")
+  .grid-container.full.bg-gray-4.pad-mobile
+    .grid-container.padding-vertical-3
+      .grid-x.padding-vertical-3
+        .cell.medium-4.medium-offset-1.pad-mobile
+          img.pad-mobile(src="/assets/img/history-of-eko-dynasty-cover-2.png", alt="The history of Eko dynasty")
+        cell.medium-5.pad-mobile.medium-offset-1.form-container
+          form.ebook-purchase-form(data-parsley-validate="" method="post" action="/")
+            h1.h2.c-gradient Purchase the e-book
+            .grid-container.grid-x.padding-0
+              .cell
+                .medium-up-6
+                  label(for="first_name") First Name
+                  input#first_name(type="text", name="first_name", placeholder="First Name" required="" data-parsley-required-message="Your first name is required")
+              .cell
+                .medium-up-6
+                  label(for="last_name") Last Name
+                  input#last_name(type="text", name="last_name", placeholder="Last Name" required="" data-parsley-required-message="Your last name is required")
+              .cell
+                .medium-up-6
+                  label(for="email") Email
+                  input#email_name(type="email", name="email", placeholder="Email Address" required="" data-parsley-required-message="Your email is required" data-parsley-email-message="Please select a valid email address")
+              .cell.grid-x
+                .cell
+                  h6 Subtotal
+                  h2#ebook-price(data-price=4500) N4,500
+              .cell.margin-top-1
+                button.button.secondary Continue to payment
+              
+
+          small.text-sans.c-gray-1.margin-top-1 Download options will be sent to your email in PDF, ePUB and MOBI after purchase. Compatible with all PCs, Macs, iPhones, iPad, Kindle and Android tablets
+        

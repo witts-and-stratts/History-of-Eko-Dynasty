@@ -1,0 +1,41 @@
+extends _layout
+block meta
+  - 
+    const title = "Get the book | History of the Eko Dynasty"
+    const description = "Get the History of the Eko Dynasty on your digital devices and purchase the physical copy on Amazon. The eBook is available in ePUB, Mobi and PDF formats."
+    const keywords = "eBook, purchase, amazon kindle, History of the Eko Dynasty, paperback"
+block content
+  .grid-container.full.bg-gray-4.pad-mobile
+    .grid-container.padding-vertical-3
+      .grid-x.padding-vertical-3
+        .cell.medium-4.medium-offset-1.pad-mobile
+          img.pad-mobile(src="/assets/img/history-of-eko-dynasty-cover-2.png", alt="The history of Eko dynasty")
+        .cell.medium-5.pad-mobile
+          h1.h2.c-gradient Purchase the e-book
+          h2.text-sans.text-light.margin-bottom-3 N4,500
+          a.button.secondary(href="/purchase-ebook.html") PURCHASE NOW
+          p.text-sans.c-gray-1.margin-top-1 Download options will be available in PDF, ePUB and MOBI after purchase. Compatible with all PCs, Macs, iPhones, iPad, Kindle and Android tablets
+          
+  .grid-container.full.padding-vertical-3.pad-mobile
+    .grid-container.padding-vertical-3.pad-mobile
+      .grid-x
+        .cell.medium-4.medium-offset-1
+          img(src="/assets/img/history-of-eko-dynasty-kindle.png", alt="The history of Eko dynasty on kindle")
+        .cell.medium-5
+          img.margin-bottom-3(src="/assets/img/amazon-kindle-logo.svg", alt="Amazon Kindle Logo")
+          p Get the book on your Amazon Kindle devices, Amazon Kindle App in iPad or the Amazon Kindle App on Android Devices
+
+          a.button.secondary(href="https://www.amazon.com/dp/B0BH3143HX" title="History of the Eko Dynasty on Kindle" target="_blank") GET ON THE KINDLE STORE
+
+  .grid-container.full.padding-vertical-3.bg-gray-7.pad-mobile
+    .grid-container
+      .grid-x.pad-mobile
+        .cell.medium-5.medium-offset-1
+          img(src="/assets/img/history-of-eko-dynasty-cover.png", alt="The history of Eko dynasty")
+        .cell.medium-6.padding-top-2
+          h2.h2.c-gradient Paperback
+          p Physical paperback edition, available for worldwide delivery.
+
+          a.button.secondary(title="Read the history of eko dynasty online" href="https://www.amazon.com/dp/9789019556" target="_blank") BUY THE BOOK ON AMAZON
+
+          img(src="/assets/img/amazon-logo.png", alt="Amazon Logo" width="180")

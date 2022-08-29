@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block meta
+      - 
+        const title = "History of the Eko Dynasty"
+        const description = "A captivating & authoritative history of EKO, it's culture & heritage"
+        const keywords = "eko, isaleko, eko dynasty, history of eko, lagos, nigeria, culture & heritage of eko"
+    title #{title}
+    meta(name="description", content=description)
+    meta(name="keywords", content=keywords)
+    link(rel='apple-touch-icon' sizes='180x180' href='/assets/img/favicons/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/assets/img/favicons/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/assets/img/favicons/favicon-16x16.png')
+    link(rel='manifest' href='/assets/img/favicons/site.webmanifest')
+    link(rel='mask-icon' href='/assets/img/favicons/safari-pinned-tab.svg' color='#5bbad5')
+    link(rel='shortcut icon' href='/assets/img/favicons/favicon.ico')
+    meta(name='msapplication-TileColor' content='#da532c')
+    meta(name='msapplication-config' content='/assets/img/favicons/browserconfig.xml')
+    meta(name='theme-color' content='#ffffff')
+
+    link(rel="stylesheet", href="/assets/css/fonts.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+    link(href="/assets/css/style.css?01", rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css")
+
+  body 
+    include _partials/_header
+    block content
+    include _partials/_footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.12.313/build/pdf.min.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js")
+    
+    script(src="/assets/js/app.js")
+    

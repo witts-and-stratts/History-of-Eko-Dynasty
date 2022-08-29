@@ -1,0 +1,7 @@
+Hello {{first_name}}, here's your copy of History of the Eko Dynasty  
+
+{{first_name}}, thank you for purchasing the eBook version of the History of the Eko Dynasty. Please use the link below to download the eBook.  
+
+Download eBook ( {{host}}/ebook-download?token={{token}} )  
+
+Have issues downloading your eBook or want more information: enquiries@allentowndp.com
